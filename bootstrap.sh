@@ -20,6 +20,9 @@ $LIME_SRC/setup.sh
 $VOLAT_SRC/setup.sh
 
 # Build Kernel
+## Deps
+sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk
+## Build
 cd $KSRC_PATH
 make defconfig lineage_hiae_defconfig
 make modules_prepare
@@ -31,5 +34,10 @@ cd $LIME_SRC
 make
 
 # Build Volatility
+## Deps
+sudo apt-get install dwarfdump
+## Build
 cd $VOLAT_SRC
 make
+## Deploy
+zip $VOLAT_SRC/volatility/plugins/overlays/linux/msm8952-cm-14.1.zip module.dwarf $KSRC_PATH/System.map 
