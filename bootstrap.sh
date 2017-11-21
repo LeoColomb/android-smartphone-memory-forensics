@@ -24,7 +24,7 @@ cd $KSRC_PATH
 make defconfig lineage_hiae_defconfig
 make modules_prepare
 make modules
-make
+#make # Failing and may not be needed
 
 # Build LiME
 cd $LIME_SRC
