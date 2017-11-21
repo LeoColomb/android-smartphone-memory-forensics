@@ -4,8 +4,8 @@
 export SDK_PATH=~/android/lineage/sdk
 export NDK_PATH=~/android/lineage/ndk
 export KSRC_PATH=~/android/lineage/kernel/htc/msm8952
-export LIME_SRC=~/android/lime/src
-export VOLAT_SRC=~/android/volatility/tools/linux
+export LIME_SRC=~/android/lime-v1.7.8/src
+export VOLAT_SRC=~/android/volatility-2.6/tools/linux
 export CC_PATH=$NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
 export CROSS_COMPILE=$CC_PATH/aarch64-linux-android-
 export ARCH=arm64
@@ -40,4 +40,4 @@ sudo apt-get install dwarfdump
 cd $VOLAT_SRC
 make
 ## Deploy
-zip $VOLAT_SRC/volatility/plugins/overlays/linux/msm8952-cm-14.1.zip module.dwarf $KSRC_PATH/System.map 
+zip $VOLAT_SRC/../../volatility/plugins/overlays/linux/msm8952-cm-14.1.zip module.dwarf $KSRC_PATH/System.map 
