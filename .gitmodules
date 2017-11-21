@@ -1,0 +1,4 @@
+[submodule "android/lineage/kernel/htc/msm8952"]
+	path = android/lineage/kernel/htc/msm8952
+	url = https://github.com/LineageOS/android_kernel_htc_msm8952
+	branch = cm-14.1
